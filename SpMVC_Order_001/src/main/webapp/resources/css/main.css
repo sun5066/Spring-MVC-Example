@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+header {
+    background-color: green;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+}
+
+li {
+    display: inline-block;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: teal;
+    color: white;
+}
+
+ul {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 1.1rem;
+    color: white;
+
+}

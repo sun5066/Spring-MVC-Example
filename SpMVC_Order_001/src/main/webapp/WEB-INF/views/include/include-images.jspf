@@ -1,0 +1,16 @@
+<%@ page language="java"
+         pageEncoding="UTF-8" %>
+<style>
+    div {
+        text-align: center;
+    }
+</style>
+
+<section>
+    <div>
+        <img src="resources/images/1.jpg" alt="신발1" width="50%"/>
+        <p>위 사진은 신발1</p>
+        <img src="resources/images/2.jpg" alt="신발2" width="50%"/>
+        <p>위 사진은 신발2</p>
+    </div>
+</section>

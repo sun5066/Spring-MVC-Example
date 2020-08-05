@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.like.sun.dao.ShowDao">
+
+    <select id="selectAll" resultType="ShoeVO">
+        SELECT * FROM tbl_shoe ORDER BY s_seq
+    </select>
+
+    <select id="findById" resultType="ShoeVO">
+        SELECT * FROM tbl_shoe WHERE s_seq = #{seq}
+    </select>
+
+    <insert id="insert" parameterType="ShoeVo">
+        INSERT INTO tbl_shoe (
+            S_SEQ,
+            S_NAME,
+            S_DATE,
+            S_AMOUNT,
+            S_QTY
+        ) VALUES (
+            SEQ_SHOE.NEXTVAL,
+            #{s_name},
+            #{s_date},
+            #{s_amount},
+            #{s_qty}
+        )
+    </insert>
+
+    <update id="update" parameterType="ShoeVO">
+        UPDATE tbl_shoe SET
+            s_name = #{s_name},
+            s_date = #{s_date},
+            s_amount = #{s_amount},
+            s_qty = #{s_qty}
+        WHERE s_seq = #{seq}
+    </update>
+
+    <delete id="delete">
+        DELETE tbl_shoe
+        WHERE s_seq = #{seq}
+    </delete>
+</mapper>
