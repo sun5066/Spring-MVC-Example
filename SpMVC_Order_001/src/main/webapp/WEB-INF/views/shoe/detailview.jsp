@@ -38,36 +38,16 @@
 <%@ include file="/WEB-INF/views/include/include-header.jspf" %>
 <%@ include file="/WEB-INF/views/include/include-nav.jspf" %>
 <section>
-    <table>
-        <thead>
-        <tr>
-            <th>No</th>
-            <th>상품명</th>
-            <th>발매일자</th>
-            <th>금액</th>
-            <th>발매수량</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${NIKE}" var="vo" varStatus="index">
-            <tr>
-                <td>
-                    <a href="shoe?seq=${vo.s_seq}">
-                            ${vo.s_seq}
-                    </a>
-                </td>
-                <td>${vo.s_name}</td>
-                <td>${vo.s_date}</td>
-                <td>${vo.s_amount}</td>
-                <td>${vo.s_qty}</td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
+    <h3>발매정보 상세보기</h3>
+    <p>SEQ : ${NIKE.s_seq}</p>
+    <p>상품명 : ${NIKE.s_name}</p>
+    <p>발매일자 : ${NIKE.s_date}</p>
+    <p>발매금액 : ${NIKE.s_amount}</p>
+    <p>발매수량 : ${NIKE.s_qty}</p>
 </section>
 <section id="buttons">
     <button id="shoe_input">
-        <a href="input">발매정보 작성</a>
+        <a href="delete?seq=${NIKE.s_seq}">발매정보 삭제</a>
     </button>
 </section>
 <%@include file="/WEB-INF/views/include/include-footer.jspf" %>

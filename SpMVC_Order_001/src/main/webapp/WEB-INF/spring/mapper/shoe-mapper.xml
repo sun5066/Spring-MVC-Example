@@ -39,7 +39,7 @@
     </update>
 
     <delete id="delete">
-        DELETE tbl_shoe
+        DELETE FROM tbl_shoe
         WHERE s_seq = #{seq}
     </delete>
 </mapper>

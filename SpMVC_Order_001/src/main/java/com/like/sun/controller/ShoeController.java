@@ -77,6 +77,7 @@ public class ShoeController {
         return "redirect:/list";
     }
 
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String delete(String seq) {
         long longSeq = 0;
         try {
